@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    tools:context="fragments.OTPFragment">
+
+   <com.google.android.material.appbar.MaterialToolbar
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:title="Enter OTP"
+       app:titleTextColor="@color/white"
+       android:id="@+id/toolbar"
+       android:background="#0D0E0F"
+       app:navigationIcon="@drawable/ic_back"
+       app:navigationIconTint="@color/white"/>
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/screen"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_otp"
+            app:tint="#C9CBD7" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do not share OTP with others"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your OTP below"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="25dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_otp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="17dp"
+
+            app:boxCornerRadiusBottomEnd="17dp"
+            app:boxCornerRadiusTopStart="17dp"
+            app:boxCornerRadiusTopEnd="17dp"
+            app:boxCornerRadiusBottomStart="17dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_number"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:drawableStart="@drawable/ic_pass"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/black"
+                android:hint="Enter your OTP here"
+                android:background="@color/white"
+                android:inputType="number"
+                android:textSize="21sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="58.5dp"
+            android:text="Continue"
+            android:id="@+id/btn_continue"
+            android:textSize="25sp"
+            android:backgroundTint="@color/primary"
+            android:layout_marginHorizontal="20dp"
+            app:cornerRadius="17dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
